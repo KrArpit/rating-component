@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Overpass', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212;
+}
+.none{
+    display: none;
+}
+.container{
+    height: 500px;
+    max-width: 500px;
+    background: linear-gradient(hsl(213, 19%, 18%) , hsl(212, 12%, 8%)) ;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 30px;
+}
+/* Starting of rating section here */
+.face-1{
+    height: 100%;
+    position: relative;
+}
+.star img{
+    padding: 14px;
+    background:hsl(213, 19%, 18%) ;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.face-1-body h1{
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 20px;
+    font-size: 38px;
+}
+.description{
+    color: hsl(216, 12%, 54%);
+    line-height: 1.6;
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+.error-msg{
+    margin-top: -15px;
+    color: #ef4242;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.buttons button{
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    margin-bottom: 40px;
+    background: hsl(213, 19%, 18%);
+    color: hsl(216, 12%, 54%);
+    transition: all 0.3s ease;
+}
+.buttons button:hover{
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+}
+.buttons button.error{
+    border: 1px solid #ef4242;
+}
+.buttons button.selected{
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+}
+.submit-button{
+    border: none;
+    width: 100%;
+    background: transparent;
+    background-color: hsl(25, 97%, 53%);
+    font-size: 17px;
+    letter-spacing: 1.4px;
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    padding: 16px;
+    border-radius: 25px;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.submit-button:hover{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+}
+/* End of rating section here */
+
+/* Thank you section started here */
+.face-2{
+    height: 100%;
+    position: relative;
+}
+.thanks-image{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.thanks-image img{
+    width: 200px;
+}
+.face-2-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.selection-msg{
+    display: inline;
+    background-color: hsl(213, 19%, 18%);
+    color: hsl(25, 97%, 53%);
+    padding: 10px 15px 10px 15px;
+    font-size: 18px;
+    border-radius: 15px;
+    margin-bottom: 35px;
+}
+.face-2-body h1{
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 15px;
+}
+.face-2-body p{
+    color: hsl(216, 12%, 54%);
+    font-size: 19.5px;
+    text-align: center;
+    line-height: 1.6;
+}
+/* End of thank you section */
+
+/* Starting mobile design here */
+@media only screen and (max-width:700px) {
+    .container{
+        max-width: 380px;
+    }
+    .description{
+        font-size: 16px;
+    }
+    .buttons button{
+        width: 50px;
+        height: 50px;
+    }
+    .thanks-image img{
+        width: 160px;
+    }
+    .face-2-body p{
+        font-size: 16px ;
+    }
+}
